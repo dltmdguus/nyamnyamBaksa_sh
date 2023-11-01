@@ -102,10 +102,22 @@
 	});
 	});
 </script>
+<script type="text/javascript">
+function naverLogin(){
+	location.href="https://nid.naver.com/oauth2.0/authorize?client_id=59vsSNIzNRQBcSk4rubJ&redirect_uri=http://localhost/login/naver&response_type=code";
+}
+</script>
+<style>
+    .map_wrap {position:relative;width:100%;height:350px;}
+    .title {font-weight:bold;display:block;}
+    .hAddr {position:absolute;left:10px;top:10px;border-radius: 2px;background:#fff;background:rgba(255,255,255,0.8);z-index:1;padding:5px;}
+    #centerAddr {display:block;margin-top:2px;font-weight: normal;}
+    .bAddr {padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+</style>
 </head>
 <body>
 	<h1>login</h1>
-
+	<hr class="hr">
 
 	<div class="loginBox">
 		<form action="./login" method="post">
@@ -129,6 +141,14 @@
 			</div>
 		</form>
 	</div>
-
+	
+	<div class="loginAPI">
+		<div id="kbtnBox">
+			<img src="img/login/login_kakaoBtn.png" alt="kakaoBtn" id="kakao" onclick="kakaoLogin()">
+		</div>
+		<div id="nbtnBox">
+			<img src="img/login/login_naverBtn.png" alt="naverBtn" id="naver" onclick="naverLogin()">
+		</div>
+	</div>
 </body>
 </html>
